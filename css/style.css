@@ -1,0 +1,997 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@417&display=swap');
+body{
+    background: #060606;
+    font-family: 'Open Sans';
+}
+
+/* -------------- TULISAN------------------------- */
+a{
+    text-decoration: none;
+    color: #E4E4E4;
+}
+
+a:hover{color:#3FC19C;}
+
+p {	
+  font-family: Open Sans;
+  color:#E4E4E4;
+  }
+   
+h1,h2,h3,h4,h5,h6{color:#E4E4E4;}
+
+h1{font-size: 40px;}
+h2{font-size: 30px;}
+h3{font-size: 25px;}
+h4{font-size: 20px;}
+h5{font-size: 15px;}
+h6{font-size: 10px;}
+
+.bold{
+  font-weight: bold;
+}
+.italic{
+  font-style: italic;
+}
+
+.focus-text{color:#3FC19C;}
+.text-center{text-align: center;}
+.rotate{
+    transform:rotateY(180deg);
+}
+
+/* ---------------- MEDIA QUERIES ----------------- */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.col-25 {
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+   
+}
+
+  @media screen and (max-width:768px){
+     /* For desktop: */
+     .col-25, .col-75 {
+        width: 100%;
+    }
+
+     .btn-section-contact{width: 100%;}
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11{
+        width:100%;
+    }
+
+    .kotak-login{
+      margin: 6rem;
+
+    }
+
+	body{
+		
+	}
+
+	.slide-dot{
+		display: none;
+	}
+
+	.section-content{
+		margin-left: -10%;
+
+	}
+
+	.container{
+        margin-top: 4rem;
+		margin-left: 2rem;
+		margin-bottom: 500px;
+		width: 100px;
+	}
+	.content-description{
+		width: 380px;
+		background: none;
+		flex-direction: column;
+		align-content: space-between;
+	}
+
+	.content-description>.description{
+		text-align: center;
+		width: 385px;
+		padding: 20px;
+		background: #141414;
+	}
+
+	.nav-links{
+		display: flex;
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		background:#292825;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		transform: translateX(100%);
+		transition: 0.3s ease-in;
+		
+	}
+
+	.nav-links li{
+		opacity: 0;
+	}
+
+	.logo{
+		margin: auto;
+	}
+
+	.burger{
+		display: block;
+		cursor: pointer;
+	}
+
+	.nav-active{
+		transform: translateX(0%);
+	}
+
+	@keyframes navLinkFade {
+		from{
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to{
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+
+}
+/*-------------------NAVIGASI-------------------*/		
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	width: 100%;
+	top: 14px;
+	background: transparent;
+	position: fixed;
+	z-index: 100;
+}
+
+/* navigasi berubah warna waktu di scroll (pakai js)*/
+.scrolling-active{
+    background: #272822;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+    top: 0;
+}
+
+.logo{
+	margin-left: 1px;
+    margin-top: 12px;
+}
+
+.logo img{
+	float: right;
+	width:150px;
+	height:60px;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 36%;
+}
+
+.nav-links li{
+	list-style: none;
+}
+
+.nav-links li>a{
+    color:#E4E4E4;
+    font-size: 1em;
+}
+
+
+.nav-links li:hover a{
+	color: #E4E4E4;
+	background-color:#3FC19C;
+	transition: 0.5s;
+	padding: 17.8px;
+}
+
+.nav-links i span{
+    display: inline;
+    font-size: 0.8em;
+    padding: 2px;
+    background: #3FC19C;
+    margin-top: -30px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+/* ------------------HALAMAN WEB ----------------- */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.section-content{
+	background: none;
+	padding: 8rem 2rem;
+}
+
+.container{
+  content: "";
+  clear: both;
+  max-width: 100%;
+  height: 100%;
+  background: #141414;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+
+.content-description{
+	display: flex;
+}
+
+.content-description >.content-img{
+	max-width: 100%;
+	max-height: 95%;
+	margin-right: 2rem;
+}
+
+.content-description>.content-img>img{
+	width: 24rem;
+	height: 33rem;
+}
+
+.content-description>.description{
+	flex: 1;
+
+}
+
+.description h2{
+	padding: 93px 4px 10px;
+}
+
+.description p{
+	width: 90%;
+	line-height: 35px;
+	font-style: none;
+	font-size: 1rem;
+	padding: 3px 1px;
+	margin-bottom: 4%;
+
+}
+
+/*----------------------CAROUSEL----------------------*/
+.mySlides {display: none}
+
+/* Slideshow container */
+.slideshow-container {
+	width: 100%;
+	position: relative;
+	margin: auto;
+}
+
+.slideshow-testimonial{
+	width: 80%;
+	position: relative;
+	margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  	right: 0;
+  	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  	background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  	color: #f2f2f2;
+  	font-size: 15px;
+  	padding: 8px 12px;
+  	position: absolute;
+  	bottom: 8px;
+  	width: 100%;
+ 	text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  	color: #f2f2f2;
+  	font-size: 12px;
+  	padding: 8px 12px;
+  	position: absolute;
+  	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.slide-dot{
+	position: absolute;
+	bottom: 30px;
+    left: 46.9%;
+}
+
+.dot {
+	cursor: pointer;
+	height: 4px;
+	width: 30px;
+	margin: 0 2px;
+	background-color: #bbb;
+	transform: translateX(-50%);
+	display: inline-block;
+	transition: 0.6s ease;	
+}
+
+.active, .dot:hover {
+  	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  	-webkit-animation-name: fade;
+  	-webkit-animation-duration: 1.5s;
+  	animation-name: fade;
+  	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  	from {opacity: .4} 
+  	to {opacity: 1}
+}
+
+@keyframes fade {
+  	from {opacity: .4} 
+  	to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+
+}
+
+/* ----------BANNER--------------------------------------- */
+/*--------------HERO IMAGE INDEX-----------------*/
+#hero-index{
+    display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../gambar/Bookstore_front4x.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#hero-index h1{
+    color: /*#060606;*/#E4E4E4;
+	margin-bottom: 7px;
+	font-size: 2rem;
+}
+
+#hero-index p{
+	width: 60%;
+	margin: 30px auto;
+    color: #E4E4E4;
+	text-align: center;
+	word-spacing: 3px;
+	font-size: 1.2em;
+}
+
+.hero-btn{
+	display: inline-block;
+	width: 160px;
+	border: 3px solid #3FC19C;
+	border-radius: 25px;
+	padding: 12px;
+	margin: 0 12px;
+	color: #3FC19C;
+	font-family: sans-serif;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.hero-btn:hover{
+	background: #3FC19C;
+	color: #F6F6F6;
+	transition: 0.5s;
+}
+
+/*--------------HERO IMAGE BOOK-----------------*/
+#hero-book{
+    display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../gambar/bookstores-hong-kong-MAIN-IMAGE-900x643.jpeg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#hero-book h1{
+    color: /*#060606;*/#E4E4E4;
+	margin-bottom: 7px;
+	font-size: 2rem;
+}
+
+#hero-book p{
+	width: 60%;
+	margin: 30px auto;
+    color: #E4E4E4;
+	text-align: center;
+	word-spacing: 3px;
+	font-size: 1.2em;
+}
+
+/*--------------HERO IMAGE CONTACT US-----------------*/
+#hero-contact{
+    display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../gambar/photo-1519060825752-c4832f2d400a.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#hero-contact h1{
+    color: /*#060606;*/#E4E4E4;
+	margin-bottom: 7px;
+	font-size: 2rem;
+}
+
+#hero-contact p{
+	width: 60%;
+	margin: 30px auto;
+    color: #E4E4E4;
+	text-align: center;
+	word-spacing: 3px;
+	font-size: 1.2em;
+}
+/* ----------------- FORM CONTACT --------------------- */
+.section-contact{
+    border-radius:5px;
+}
+    .form-contact{
+        margin-top: 2rem;
+    }
+        .section-contact label{
+            display: inline-block;
+            padding: 12px 12px 12px 0;
+            color:#E4E4E4;
+        }
+
+        .section-contact input[type=text], textarea{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background: #292825;
+            color: #E4E4E4;
+            resize: vertical;
+        }
+        .btn-section-contact{
+            background: #7D7D7D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: left;
+            
+        }
+
+            .btn-section-contact:hover{
+                background: #3FC19C;
+                transition: 0.5s;
+            }
+/*----------------- PROFILE --------------------------*/
+.container-profile{
+	width: 100%;
+	margin-top: 8em;
+	padding: 2%;
+	background: none;
+}
+
+.section-profile{
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	align-content: center;
+	flex-wrap: wrap;
+	background: none;
+	gap: 1rem;
+}
+
+.bulat-profile{
+	border-radius: 50%;
+	width: 200px;
+	max-width: 300px;
+}
+
+.profile-judul{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.profile{
+	flex-basis: 300px;
+	background: #141414;
+	padding: 20px 1px;
+	margin-bottom: 2em;
+	
+}
+
+    .profile .pict{
+        background: none;
+        margin-bottom: 8%;
+        background: none;
+    }
+
+
+    .profile img{
+        margin-left: 15%;
+    }
+
+    .profile h4{
+        text-align: center;
+        padding: 5px;
+    }
+
+    .profile p{
+        text-align: center;
+        font-size: 16px;
+        padding: 1rem;
+    }
+
+/* CONTACT US */
+/*--------------- MAP (GOOGLE)--------------------------------*/
+.map{
+	background: none;
+	width: 100%;
+	margin-top: 4%;
+}
+
+.map h1{
+	text-align: center;
+	padding: 25px;
+}
+/* //CONTACT US */
+
+
+/* BOOKSTORE */
+/*----------------- KOLEKSI BUKU ------------------------------*/
+.container-buku{
+	width: 100%;
+	margin-top: 8em;
+	padding: 2%;
+	background: none;
+}
+
+    .judul-section h3{
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .main-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 8% 5%;
+        background: none;
+    }
+
+        .buku-section{
+            flex-basis: 380px;
+            margin-bottom: 3em;
+        }
+
+
+        .buku-section h4{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+
+        .buku-section img{
+            margin-left: 30%;
+            margin-right: 10%;
+        }
+
+        .img-buku{
+            max-width: 180px;
+            height: 240px;
+        }
+
+        .buku-section .qty-box{
+            margin: auto 10.6rem ; 
+            color: #E4E4E4;
+            background: #141414;
+            border: 1px solid #141414;
+            text-align: center;
+        }
+
+        .buku-section p{
+            text-align: center;
+            font-size: 1.1em;
+            padding: 5px;
+        }
+
+/* //BOOKSTORE */
+/* ------------ BUTTON ------------------------ */
+.btn{
+    display: block;
+    cursor:pointer;
+    width: 80px;
+    border: 3px solid #3FC19C;
+    background: transparent;
+    border-radius: 25px;
+    margin: 2rem auto;
+    padding: 12px;
+    color: #E4E4E4;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.btn:hover{
+    background: #3FC19C;
+    color: #F6F6F6;
+    transition: 0.5s;
+}
+
+.btn-danger{
+    border: 3px solid #EB1E1E;
+}
+
+.btn-danger:hover{
+    background: #EB1E1E;
+    color: #F6F6F6;
+    transition: 0.5s;
+}
+
+/*---------------LOGIN------------------------*/
+.section-login{
+    margin-top: 12%;
+    
+}
+    .kotak-login{
+        background: #141414;
+        border: 1px solid;
+        border-radius: 2px;
+        margin-left: 35%;
+        margin-bottom: 8rem;
+        padding: 30px 20px;
+        }
+
+        .kotak-login label{
+            display: inline-block;
+            padding: 12px 12px 12px 20px;
+            color: #E4E4E4;
+        }
+        
+        .form-login{
+            color:#E4E4E4;
+            background: #272822;
+            border: 5px solid transparent;
+            width: 90%;
+            height: 30px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .btn-masuk{
+            background: #7D7D7D;
+            color: #E4E4E4;
+            padding: 8px;
+            width: 90%;
+            margin-left: 20px;
+            border: none;
+            font-size: 15px;
+        }
+        
+        .btn-masuk:hover{
+            background: #3FC19C;
+            color: #ffffff;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        
+        .section-register{
+            text-align: center;
+            margin:40px 2px 2px;
+        }
+
+            .section-register a{
+                color: #4C66E6;
+            }
+
+
+/* --------------- ADMIN -------------------------- */
+.container-input{
+    background:#141414;
+    margin-top: 12%;
+}
+
+.container-input h3{
+    
+}
+
+.input-section{
+    background: #141414;
+    width: 45vw;
+    border: 1px solid transparent;
+    color: #E4E4E4;
+    padding: 30px 20px;
+    margin-left: 2%;
+}
+
+    .input-section label{
+        display: inline-block;
+        padding: 12px 12px 12px 12px;
+        color: #E4E4E4;
+    }
+
+.kotak-input{
+    border: 2px solid transparent;
+    padding: 12px;
+    width: 90%;
+    height: 50px;
+    margin-bottom: 20px;
+    background: #272822;
+    color: #E4E4E4;
+}
+
+.btn-admin{
+    color: #E4E4E4;
+    border: none;
+    padding: 12px;
+}
+
+.btn-admin:hover{
+    background: #3FC19C;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn-input{
+    background: #7D7D7D;
+}
+
+.btn-reset{
+    background: #7D7D7D;
+}
+
+/* --------- TABLE DATABASE ------------- */
+.table-section{
+    display: table;
+    color: #E4E4E4;
+    width: fit-content;
+    margin: 7rem auto ;
+}
+
+.table-caption{
+    display: table-caption;
+    font-weight: bold;
+    text-align: center;
+    font-size:40px;
+    margin-bottom: 2%;
+}
+
+.table-headerrow{
+    display: table-header-group;
+    background:#272822;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.table-headercell{
+    display: table-cell;
+    padding: 0.8rem;
+    text-align: center;
+    border: 1px solid #272822;
+}
+
+.table-body{
+    display: table-row-group;
+}
+
+.table-row{
+    display: table-row;
+}
+
+.data-center{
+    margin: auto;
+    width: 30em;
+}
+
+.table-cellrow{
+    display: table-cell;
+    font-size: 0.9rem;
+    background: #141414;
+    border: 1px solid #272822;
+    padding: 8px;
+}
+
+.img-bukudb{
+    width: 75px;
+    height: 90px;
+}
+/* ---------------- MODAL ------------------------- */
+/* The Modal (background) */
+.modal {
+    display: flex; /* Hidden by default */ /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    justify-content: center;    
+    margin-top: 6rem;
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background: #141414;
+    color: #E4E4E4;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #3FC19C;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #272822;
+    color: white;
+  }
+  
+  .modal-body {
+    padding: 12px 16px;
+    align-content: center;
+}
+  
+  .modal-footer {
+    display: flex;
+    padding: 2px 16px;
+    background-color: #272822;
+    color: white;
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+  }
+  
+  @keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+
+/*---------------. FOOTER----------------------------*/
+.footer{
+    display: flex;
+    background: #141414;
+    width: 100%;
+    margin-top: 4%;
+}
+.content-footer2{
+   margin-top: 1%;
+   margin-left: 3%;
+   margin-right: 3%;
+   background: none;
+   text-align: center;
+   width: 100%;
+}
+    .content-footer2 p{
+    font-size: 15px;
+    padding: 3px;
+    text-align: center;
+    }
+
+.socialmedia{
+   font-size: 18px;
+   display: inline-block;
+   background: transparent;
+   color: #E4E4E4;
+   line-height: 1;
+   padding: 8px 0;
+   margin-top: 2%;
+   margin-right: 4px;
+   border-radius: 50%;
+   text-align: center;
+   width: 36px;
+   height: 36px;
+   transition: 0.3s
+}
+
